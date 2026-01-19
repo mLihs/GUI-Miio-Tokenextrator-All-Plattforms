@@ -32,7 +32,8 @@ jobs:
 
       - name: Build macOS app
         run: |
-          pyinstaller XiaomiTokenExtractor.spec
+          rm -rf dist build
+          pyinstaller XiaomiTokenExtractor.spec --clean -y
           
       - name: Create ZIP for artifact
         run: |
@@ -68,7 +69,9 @@ jobs:
 
       - name: Build Windows app
         run: |
-          pyinstaller XiaomiTokenExtractor-Windows.spec
+          if (Test-Path dist) { Remove-Item -Recurse -Force dist }
+          if (Test-Path build) { Remove-Item -Recurse -Force build }
+          pyinstaller XiaomiTokenExtractor-Windows.spec --clean -y
 
       - name: Create ZIP for artifact
         run: |
@@ -107,8 +110,9 @@ jobs:
           pip install .
           pip install pyinstaller
 
-      - name: Build Linux app
+            - name: Build Linux app
         run: |
+          rm -rf dist build
           pyinstaller --onefile --windowed \
             --name "XiaomiTokenExtractor" \
             --icon Xiaomi-cloud-tokens-extractor/icon.ico \
@@ -118,6 +122,7 @@ jobs:
             --hidden-import PySide6.QtWidgets \
             --hidden-import PySide6.QtNetwork \
             src/token_extractor_gui/app.py
+
 
       - name: Make executable
         run: chmod +x dist/XiaomiTokenExtractor
