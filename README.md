@@ -90,8 +90,8 @@ python -m token_extractor_gui
 | Platform | Status | Architecture | Download Format | Notes |
 |----------|--------|--------------|-----------------|-------|
 | **macOS** | ✅ Tested | Apple Silicon + Intel | `.zip` (contains `.app`) | M1/M2/M3 + Intel Macs |
-| **Windows** | ⚠️ CI Built | x64 | `.zip` (contains `.exe` + files) | Windows 10/11 |
-| **Linux** | ⚠️ CI Built | x64 | `.tar.gz` (single binary) | Ubuntu 20.04+ / Debian 11+ |
+| **Windows** | ✅ Tested | x64 | `.zip` (contains `.exe` + files) | Windows 10/11 |
+| **Linux** | ✅ Tested | x64 | `.tar.gz` (single binary) | Ubuntu 20.04+ / Debian 11+ |
 
 **Legend:**
 - ✅ **Tested** - Verified working on actual hardware
