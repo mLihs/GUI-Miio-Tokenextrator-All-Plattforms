@@ -20,6 +20,9 @@ dependencies = [
 [project.scripts]
 token-extractor-gui = "token_extractor_gui.app:run"
 
+[tool.setuptools.package-data]
+token_extractor_gui = ["assets/*.svg"]
+
 
 
 

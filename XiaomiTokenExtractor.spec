@@ -5,7 +5,10 @@ a = Analysis(
     ['src/token_extractor_gui/app.py'],
     pathex=[],
     binaries=[],
-    datas=[('Xiaomi-cloud-tokens-extractor/icon.ico', '.')],
+    datas=[
+        ('Xiaomi-cloud-tokens-extractor/icon.ico', '.'),
+        ('src/token_extractor_gui/assets/chevron-down.svg', 'assets'),
+    ],
     hiddenimports=['PySide6.QtCore', 'PySide6.QtGui', 'PySide6.QtWidgets', 'PySide6.QtNetwork'],
     hookspath=[],
     hooksconfig={},

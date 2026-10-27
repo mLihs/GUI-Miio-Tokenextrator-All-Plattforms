@@ -12,3 +12,4 @@ src/token_extractor_gui.egg-info/dependency_links.txt
 src/token_extractor_gui.egg-info/entry_points.txt
 src/token_extractor_gui.egg-info/requires.txt
 src/token_extractor_gui.egg-info/top_level.txt
+src/token_extractor_gui/assets/chevron-down.svg

@@ -141,6 +141,7 @@ pip install pyinstaller
 pyinstaller --onefile --windowed \
   --name "XiaomiTokenExtractor" \
   --icon Xiaomi-cloud-tokens-extractor/icon.ico \
+  --add-data "src/token_extractor_gui/assets/chevron-down.svg:assets" \
   src/token_extractor_gui/app.py
 ./dist/XiaomiTokenExtractor
 ```
@@ -176,23 +177,23 @@ git push origin v2.0.0
 ## 📖 How to Use
 
 ### 1. **Authentication**
-Choose your preferred method:
-- **Password Tab**: Enter Xiaomi account credentials
-- **QR Tab**: Scan QR code with Xiaomi Home app
+Choose a method in the sidebar:
+- **Password**: Enter Xiaomi account credentials
+- **QR code**: Scan the code that appears with the Xiaomi Home app
 
 ### 2. **Select Server Region**
 - Choose your region (or "All regions" to search everywhere)
 - Most devices are in: CN (China), DE (Germany), US (United States)
 
 ### 3. **Fetch Devices**
-- Click "Fetch devices" or "Fetch devices via QR login"
+- Click "Fetch devices" or "Sign in with QR"
 - Wait for the progress bar to complete
 - Devices appear organized by server and home
 
 ### 4. **Find & Copy Tokens**
 - **Search**: Type in the search bar to filter devices
-- **Copy**: Right-click any device to copy specific fields
-- **Export**: Use export buttons for CSV/JSON/YAML formats
+- **Copy**: Select a device and use the copy buttons, or right-click a row
+- **Export**: Use the JSON, YAML, and CSV buttons in the status bar
 
 ## 🔧 Advanced Features
 

@@ -117,6 +117,7 @@ jobs:
             --name "XiaomiTokenExtractor" \
             --icon Xiaomi-cloud-tokens-extractor/icon.ico \
             --add-data "Xiaomi-cloud-tokens-extractor/icon.ico:." \
+            --add-data "src/token_extractor_gui/assets/chevron-down.svg:assets" \
             --hidden-import PySide6.QtCore \
             --hidden-import PySide6.QtGui \
             --hidden-import PySide6.QtWidgets \
